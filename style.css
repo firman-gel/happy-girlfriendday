@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Press Start 2P', cursive;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('assets/IMG_2435.png'), url('assets/IMG_0973.jpeg'), url('assets/IMG_0494.jpeg'), url('assets/IMG_0387.jpeg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3) blur(1.5px);
+  animation: slide 40s infinite linear;
+  z-index: -2;
+}
+
+@keyframes slide {
+  0% { background-image: url('assets/IMG_2435.png'); }
+  25% { background-image: url('assets/IMG_0973.jpeg'); }
+  50% { background-image: url('assets/IMG_0494.jpeg'); }
+  75% { background-image: url('assets/IMG_0387.jpeg'); }
+  100% { background-image: url('assets/IMG_2435.png'); }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 90%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px dashed pink;
+  border-radius: 20px;
+}
+
+h1 {
+  font-size: 16px;
+  color: #ff69b4;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+canvas#hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
